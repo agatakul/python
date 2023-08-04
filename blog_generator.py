@@ -9,8 +9,7 @@ from dotenv import dotenv_values
 config = dotenv_values(".env")
 
 #Now, all we have to do is replace the exposed API key with the environment variable in the config dictionary like so:
-#openai.api_key = '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' # api key for openAI
-openai.api_key = config['API_KEY']
+openai.api_key = config['API_KEY']  # Securing Our App
 
 # Note: If you want to push your code to GitHub, you don't want to push the .env file as well. In the root directory of your project, create a file called .gitignore, and in the Git ignore file, type in .env. This will prevent the file from being tracked by Git and ultimately pushed to GitHub.
 
@@ -41,7 +40,6 @@ while keep_writing == True:
 		
 # rate limit - Rate limit is the number of API calls an app or user can make within a given time period. For GPT-3, the rate limit is 20 requests per minute. 
 
-# Securing Our App
 		
 
 		
